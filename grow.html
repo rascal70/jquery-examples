@@ -1,35 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Example of jQuery Multiple Properties Animation</title>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<style type="text/css">
-    .box{
-        width: 100px;
-        height: 100px;
-        background: #9d7ede;
-        margin-top: 30px;
-        border-style: solid; /* Required to animate border width */
-        border-color: #6f40ce;
-    }
-</style>
-<script type="text/javascript">
-$(document).ready(function(){
-    $("button").click(function(){
-        $(".box").animate({
-            width: "300px",
-            height: "300px",
-            marginLeft: "150px",
-            borderWidth: "10px",
-            opacity: 0.5
+    <meta charset="UTF-8">
+    <title>Example of jQuery Multiple Properties Animation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .box {
+            width: 150px;
+            height: 50px;
+            background: #ccc;
+            margin-top: 30px;
+            border-style: solid;
+            /* Required to animate border width */
+            border-color: #6f40ce;
+            overflow: hidden;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $(".box").animate({
+                        width: "300px",
+                        height: "300px",
+                        marginLeft: "150px",
+                        borderWidth: "10px",
+                        opacity: 0.5
+                    })
+                    .fadeOut(1000)
+                    .fadeIn(1000)
+                    .animate({
+                        height: "50px",
+                        width: "150px"
+                    });
+            });
+            // method chaining
         });
-    });
-});
-</script>
+
+    </script>
+
+    <script>
+        let myObj = {
+            head: 2,
+            legs: 2,
+            toes: 10
+        }
+        console.log(myObj);
+
+    </script>
+
+
+
+
 </head>
+
 <body>
     <button type="button">Start Animation</button>
-    <div class="box"></div>
+    <div class="box">
+        <h2>PROFILE</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel libero ac elit bibendum faucibus. Praesent molestie nisi non volutpat facilisis. Vestibulum lacinia pharetra quam, in congue nisl condimentum eget. Donec interdum turpis at congue vulputate. Aenean ac felis id mauris elementum elementum. Phasellus imperdiet sit amet sapien sed rutrum. Pellentesque sit amet nibh nulla.
+
+        </p>
+    </div>
 </body>
-</html>                            
+
+</html>
